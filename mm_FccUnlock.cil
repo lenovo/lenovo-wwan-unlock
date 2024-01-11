@@ -1,0 +1,4 @@
+(typeattributeset cil_gen_require var_log_t)
+(typeattributeset cil_gen_require modemmanager_t)
+(allow modemmanager_t var_log_t (dir (add_name write)))
+(allow modemmanager_t var_log_t (file (create open)))

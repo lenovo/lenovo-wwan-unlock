@@ -1,0 +1,3 @@
+(typeattributeset cil_gen_require modemmanager_t)
+(typeattributeset cil_gen_require dmidecode_exec_t)
+(allow modemmanager_t dmidecode_exec_t (file (execute execute_no_trans getattr open read)))

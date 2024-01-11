@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# SPDX-License-Identifier: CC0-1.0
+# 2023 Nitin Joshi <njoshi1@lenovo.com>
+#
+# Fibocom L860R+ FCC unlock mechanism
+#
+
+./opt/fcc_lenovo/DPR_Fcc_unlock_service
+exit $?

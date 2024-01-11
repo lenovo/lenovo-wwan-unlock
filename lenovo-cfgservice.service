@@ -1,0 +1,13 @@
+[Unit]
+Description=sar config
+
+[Service]
+Type=simple
+User=root
+ExecStart=/opt/fcc_lenovo/configservice_lenovo
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=20
+
+[Install]
+WantedBy=multi-user.target
