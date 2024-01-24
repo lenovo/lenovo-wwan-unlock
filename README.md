@@ -13,7 +13,7 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad X1 Carbon Gen 10
    - ThinkPad X1 Carbon Gen 11
 
-3) WWAN module : Fibocom FM350 5G  
+2) WWAN module : Fibocom FM350 5G  
    Supported systems:
    - ThinkPad X1 Yoga Gen 7
    - ThinkPad X1 Yoga Gen 8
