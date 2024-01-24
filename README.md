@@ -4,46 +4,49 @@ FCC and DPR unlock for Lenovo PCs
 Instructions to perform FCC unlock and SAR config:
 
 -----------------------------------------------------------------
-List of Supported WWAN Module and systems:
+List of Supported WWAN Modules and Systems:
 
-1) WWAN module : Fibocom L860R+
-Supported System:
-- ThinkPad X1 Yoga Gen 7
-- ThinkPad X1 Yoga Gen 8
-- ThinkPad X1 Carbon Gen 10
-- ThinkPad X1 Carbon Gen 11
+1) WWAN module : Fibocom L860R+  
+   Supported systems:
+   - ThinkPad X1 Yoga Gen 7
+   - ThinkPad X1 Yoga Gen 8
+   - ThinkPad X1 Carbon Gen 10
+   - ThinkPad X1 Carbon Gen 11
 
-2) WWAN module : Fibocom FM350 5G
-Supported System:
-- ThinkPad X1 Yoga Gen 7
-- ThinkPad X1 Yoga Gen 8
-- ThinkPad X1 Carbon Gen 10
-- ThinkPad X1 Carbon Gen 11
+3) WWAN module : Fibocom FM350 5G  
+   Supported systems:
+   - ThinkPad X1 Yoga Gen 7
+   - ThinkPad X1 Yoga Gen 8
+   - ThinkPad X1 Carbon Gen 10
+   - ThinkPad X1 Carbon Gen 11
+
+Enablement is done on a Module + System basis. **Systems not listed 
+are currently not supported.**
 
 ------------------------------------------------------------------------
-Operating System:
+Tested Operating Systems:
 - Ubuntu 22.04 : OK
 - Fedora: OK
 
 ------------------------------------------------------------------------
-**Please follow below procedure step by step to enable WWAN**
+**Please follow the procedure below step by step to enable WWAN**
 
-Step-1: Install SAR config package and FCC unlock:
-Execute "fcc_unlock_setup.sh" script using ebelow command:
-- chmod ugo+x fcc_unlock_setup.sh
-- ./fcc_unlock_setup.sh
-
-Step-2: Reboot machine (this is needed only one time)
-
-------------------------------------------------------------------------
-Log can be checked below:
-Log:  cat /var/log/syslog | grep -i dpr
-OR
-use "journalctl" command
+1) Run the `fcc_unlock_setup.sh` script to
+   install SAR config package and FCC unlock:
+   ```
+   chmod ugo+x fcc_unlock_setup.sh
+   ./fcc_unlock_setup.sh
+   ```
+2) Reboot machine (Only needed once)
 
 ------------------------------------------------------------------------
-Additional Note:
-- Please restart Modem using command "systemctl restart ModemManager"
-after reboot, if Modem disappears.
+Logs can be checked using **one** of the commands below:
+- `cat /var/log/syslog | grep -i dpr`
+- `journalctl`
+
+------------------------------------------------------------------------
+Additional Notes:
+- If the Modem disappears after the machine reboots, please
+restart it with the `systemctl restart ModemManager` command.
 
 ------------------------------------------------------------------------
