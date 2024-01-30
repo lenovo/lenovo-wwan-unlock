@@ -17,7 +17,7 @@ echo $NAME
 if [[ "$NAME" == *"$OS_UBUNTU"* ]]
 then
 	### Copy fcc unlock script for MM
-	sudo cp -rvf fcc-unlock.d /usr/lib/x86_64-linux-gnu/ModemManager/.
+	sudo tar -zxf fcc-unlock.d.tgz -C /usr/lib/x86_64-linux-gnu/ModemManager/
 	sudo chmod ugo+x /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/*
 
 	### Copy libraries
@@ -28,7 +28,7 @@ then
 elif [[ "$NAME" == *"$OS_FEDORA"* ]]
 then
 	### Copy fcc unlock script for MM
-	sudo cp -rvf fcc-unlock.d /usr/lib64/ModemManager/.
+	sudo tar -zxf fcc-unlock.d.tgz -C /usr/lib64/ModemManager/
 	sudo chmod ugo+x /usr/lib64/ModemManager/fcc-unlock.d/*
 
 	ln -s /usr/sbin/lspci /usr/bin/lspci
