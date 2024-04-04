@@ -97,6 +97,7 @@ restart it with the `systemctl restart ModemManager` command.
    - Quectel RM520N-GL
    - Quectel EM160R-GL
    - Quectel EM061K
+
   Reason: Carrier certification for USA operator is not completed and it
-           will take few months to enable WWAN for USA SIM.
+          will take few months to enable WWAN for USA SIM.
 ------------------------------------------------------------------------
