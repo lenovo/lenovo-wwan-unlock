@@ -30,7 +30,8 @@ List of Supported WWAN Modules and Systems:
    Supported systems:
    - ThinkPad X1 Carbon Gen 12
    - ThinkPad X1 2-in-1 Gen 9
-   Environment:
+     
+   **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.6 or later
    - ModemManager version: 1.22 or later
 
@@ -40,7 +41,8 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad X1 2-in-1 Gen 9
    - ThinkPad L14 Gen 5
    - ThinkPad L16 Gen 1
-   Environment:
+     
+   **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.5 or later
    - ModemManager version: 1.22 or later
 
@@ -50,14 +52,16 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad L13 2-in-1 Gen 5
    - ThinkPad L14 Gen 5
    - ThinkPad L16 Gen 1
-   Environment:
+     
+   **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.5 or later
    - ModemManager version: 1.22 or later
 
 6) WWAN module : Quectel EM05-CN (*Please refer below required Environment) 
    Supported systems:
    - ThinkPad X1 Carbon Gen 12
-   Environment:
+     
+   **Environment**:
    - Kernel version: 6.6 or later
    - ModemManager version: 1.21.2 or later
 
@@ -89,5 +93,10 @@ Logs can be checked using **one** of the commands below:
 Additional Notes:
 - If the Modem disappears after the machine reboots, please
 restart it with the `systemctl restart ModemManager` command.
-
+- WWAN enablement is not done for USA SIM for below modules:
+   - Quectel RM520N-GL
+   - Quectel EM160R-GL
+   - Quectel EM061K
+  Reason: Carrier certification for USA operator is not completed and it
+           will take few months to enable WWAN for USA SIM.
 ------------------------------------------------------------------------
