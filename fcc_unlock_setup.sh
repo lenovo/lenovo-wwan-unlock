@@ -1,5 +1,9 @@
 #! /bin/bash
 
+### Insure the working directory is the same as the script
+pushd "$(dirname "$0")" &> /dev/null || exit 1
+trap "popd &> /dev/null" EXIT
+
 echo "Copying files and libraries..."
 
 if [ ! -d "/opt/fcc_lenovo" ]
