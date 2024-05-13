@@ -1,4 +1,0 @@
-(typeattributeset cil_gen_require modemmanager_t)
-(typeattributeset cil_gen_require dmidecode_exec_t)
-(allow modemmanager_t dmidecode_exec_t (file (execute_no_trans open)))
-(allow modemmanager_t dmidecode_exec_t (file (map)))
