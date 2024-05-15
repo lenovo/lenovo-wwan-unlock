@@ -19,7 +19,7 @@ are currently not supported.**
 
 ------------------------------------------------------------------------
 Tested Operating Systems:
-- Alpine OS : not working (under checking)
+- EVE OS (based on Alpine OS)
 
 ------------------------------------------------------------------------
 **Please follow the procedure below step by step to enable WWAN**
