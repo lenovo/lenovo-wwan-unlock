@@ -73,6 +73,14 @@ systemctl enable lenovo-cfgservice
 ### Grant permissions to all binaries and script
 sudo chmod ugo+x /opt/fcc_lenovo/*
 
+### Below mentioned script is executed to fix issues related to WWAN.
+### Issue List:
+### 1) System sometimes wake up during suspend mode, while using Fibocom
+###    L860-GL-16/FM350 and Quectel EM160R-GL/RM520N-GL WWAN module.
+sudo chmod ugo+x wwan_issue_fix.sh
+./wwan_issue_fix.sh
+
+
 ## Please reboot machine (this will be needed only one for time)##
 
 ### Exit script
