@@ -18,6 +18,8 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad T14s Gen 4
    - ThinkPad T16 Gen 1
    - ThinkPad T16 Gen 2
+   - ThinkPad L14 Gen 4
+   - ThinkPad L15 Gen 4
 
 2) WWAN module : Fibocom FM350 5G  
    Supported systems:
@@ -30,6 +32,9 @@ List of Supported WWAN Modules and Systems:
    Supported systems:
    - ThinkPad X1 Carbon Gen 12
    - ThinkPad X1 2-in-1 Gen 9
+   - ThinkPad T14 Gen 5 (Intel/AMD)
+   - ThinkPad T16 Gen 3
+   - ThinkPad T14s Gen 5 (Intel)
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.6 or later
@@ -41,6 +46,8 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad X1 2-in-1 Gen 9
    - ThinkPad L14 Gen 5
    - ThinkPad L16 Gen 1
+   - ThinkPad X13 2-in-1 Gen 5
+   - ThinkPad T14 Gen 5 (Intel/AMD)
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.5 or later
@@ -52,6 +59,11 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad L13 2-in-1 Gen 5
    - ThinkPad L14 Gen 5
    - ThinkPad L16 Gen 1
+   - ThinkPad X13 Gen 5
+   - ThinkPad X13 2-in-1 Gen 5
+   - ThinkPad T14 Gen 5 (Intel/AMD)
+   - ThinkPad T16 Gen 3
+   - ThinkPad T14s Gen 5 (Intel)
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.5 or later
@@ -60,6 +72,9 @@ List of Supported WWAN Modules and Systems:
 6) WWAN module : Quectel EM05-CN (*Please refer below required Environment) 
    Supported systems:
    - ThinkPad X1 Carbon Gen 12
+   - ThinkPad X13 Gen 5
+   - ThinkPad X13 2-in-1 Gen 5
+   - ThinkPad T14 Gen 5 (Intel)
      
    **Environment**:
    - Kernel version: 6.6 or later
