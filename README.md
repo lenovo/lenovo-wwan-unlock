@@ -100,6 +100,15 @@ Tested Operating Systems:
 2) Reboot machine (Only needed once)
 
 ------------------------------------------------------------------------
+**Please follow the procedure for uninstalling this package**
+
+1) Run the `fcc_unlock_uninstall.sh` script to
+   uninstall SAR config package and FCC unlock:
+   ```
+   chmod ugo+x fcc_unlock_uninstall.sh
+   ./fcc_unlock_uninstall.sh
+   ```
+------------------------------------------------------------------------
 Logs can be checked using **one** of the commands below:
 - `cat /var/log/syslog | grep -i dpr`
 - `journalctl`
