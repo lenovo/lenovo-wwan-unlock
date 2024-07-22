@@ -2,6 +2,7 @@
 # vim:ts=4:noet
 
 MM_DROPIN_DIR=/etc/systemd/system/ModemManager.service.d
+MM_DROPIN_FILENAME="apply-test-option.conf"
 MM_SUSPEND_FIX_DIR=$(dirname "${BASH_SOURCE[0]}")
 FCC_LENOVO_DIR=/opt/fcc_lenovo
 
@@ -39,7 +40,7 @@ install_dropin() {
 		sudo mkdir -p "$MM_DROPIN_DIR"
 	fi
 
-	sudo cp -vf "$MM_SUSPEND_FIX_DIR/apply-test-option.conf" "$MM_DROPIN_DIR"
+	sudo cp -vf "$MM_SUSPEND_FIX_DIR/$MM_DROPIN_FILENAME" "$MM_DROPIN_DIR"
 	sudo mkdir -p "$FCC_LENOVO_DIR/suspend-fix"
 	sudo cp -vf "$MM_SUSPEND_FIX_DIR/mm-wrapper.sh" "$FCC_LENOVO_DIR/suspend-fix"
 	sudo chmod ugo+x "$FCC_LENOVO_DIR/suspend-fix/mm-wrapper.sh"
