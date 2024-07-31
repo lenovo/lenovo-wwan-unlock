@@ -51,7 +51,7 @@ install_dropin() {
 
 if [ "${BASH_SOURCE[0]}" = "$0" ]; then
 	for pid in "${MM_PIDS[@]}"; do
-		if lspci -d ":$pid" &>/dev/null; then
+		if [ -n $(lspci -d ":$pid")" ]; then
 			echo "Found PCI ID $pid, installing the ModemManager drop-in override"
 			install_dropin
 			exit
