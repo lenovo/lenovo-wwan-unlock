@@ -11,6 +11,14 @@ then
         sudo mkdir /opt/fcc_lenovo
 fi
 
+if [ ! -d "/opt/fcc_lenovo/lib" ]
+then
+        sudo mkdir /opt/fcc_lenovo/lib
+fi
+
+### Identify current OS
+OS_UBUNTU="Ubuntu"
+OS_FEDORA="Fedora"
 ### Identify current OS
 OS_UBUNTU="Ubuntu"
 OS_FEDORA="Fedora"
@@ -28,10 +36,10 @@ then
 	sudo tar -zxf sar_config_files.tar.gz -C /opt/fcc_lenovo/
 
 	### Copy libraries
-	sudo cp -rvf libmodemauth.so /usr/lib/
-	sudo cp -rvf libconfigserviceR+.so /usr/lib/
-	sudo cp -rvf libconfigservice350.so /usr/lib/
-	sudo cp -rvf libmbimtools.so /usr/lib/
+	sudo cp -rvf libmodemauth.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libconfigserviceR+.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libconfigservice350.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libmbimtools.so /opt/fcc_lenovo/lib/
 
 elif [[ "$NAME" == *"$OS_FEDORA"* ]]
 then
@@ -45,10 +53,10 @@ then
 	ln -s /usr/sbin/lspci /usr/bin/lspci
 
 	### Copy libraries
-	sudo cp -rvf libmodemauth.so /usr/lib64/
-	sudo cp -rvf libconfigserviceR+.so /usr/lib/
-	sudo cp -rvf libconfigservice350.so /usr/lib/
-	sudo cp -rvf libmbimtools.so /usr/lib/
+	sudo cp -rvf libmodemauth.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libconfigserviceR+.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libconfigservice350.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libmbimtools.so /opt/fcc_lenovo/lib/
 
 	### Copy files for selinux for fedora
 	sudo cp -rvf mm_FccUnlock.cil /opt/fcc_lenovo
