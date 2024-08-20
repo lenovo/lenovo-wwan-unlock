@@ -117,10 +117,13 @@ Logs can be checked using **one** of the commands below:
 Additional Notes:
 - If the Modem disappears after the machine reboots, please
 restart it with the `systemctl restart ModemManager` command.
-- WWAN enablement is not done for USA SIM for below modules:
+- WWAN enablement is not done for USA SIM, used in below modules:
+   - Fibocom FM350
    - Quectel RM520N-GL
    - Quectel EM160R-GL
    - Quectel EM061K
+- WWAN enablement is done for USA SIM except for Verizon SIM, used in below module:
+   - Fibocom L860R+
 
   Reason: Carrier certification for USA operator is not completed and it
           will take few months to enable WWAN for USA SIM.
