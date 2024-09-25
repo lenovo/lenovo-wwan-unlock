@@ -1,0 +1,48 @@
+abi <abi/3.0>,
+
+include <tunables/global>
+
+/opt/fcc_lenovo/configservice_lenovo {
+  include <abstractions/base>
+  include <abstractions/openssl>
+
+  unix peer=(addr=@mbim-proxy),
+
+  /opt/fcc_lenovo/configservice_lenovo mr,
+  /usr/bin/cat ix,
+  /usr/bin/dash ix,
+  /usr/bin/grep ix,
+  /usr/bin/lspci Cx,
+  /usr/bin/ls ix,
+  /usr/bin/ps Uxr,
+  /usr/sbin/dmidecode Cx,
+
+  owner /dev/ r,
+  owner /dev/wwan0at0 rw,
+  owner /dev/wwan0mbim0 rw,
+  owner /sys/firmware/dmi/tables/DMI r,
+  owner /sys/firmware/dmi/tables/smbios_entry_point r,
+  owner /sys/devices/virtual/dmi/id/product_family r,
+
+  owner /opt/fcc_lenovo/sar_config_files/* r,
+  owner /run/* rw,
+
+  profile /usr/bin/lspci {
+    include <abstractions/base>
+
+    capability sys_admin,
+
+    /usr/bin/lspci mr,
+    /sys/bus/pci/devices/ r,
+    /sys/devices/** r,
+  }
+
+  profile /usr/sbin/dmidecode {
+    include <abstractions/base>
+
+    /usr/sbin/dmidecode mr,
+    /sys/firmware/dmi/tables** r,
+    /sys/firmware/efi/systab r,
+    /dev/mem r,
+  }
+}
