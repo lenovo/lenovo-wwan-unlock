@@ -18,6 +18,8 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad T14s Gen 4
    - ThinkPad T16 Gen 1
    - ThinkPad T16 Gen 2
+   - ThinkPad L14 Gen 4
+   - ThinkPad L15 Gen 4
 
 2) WWAN module : Fibocom FM350 5G  
    Supported systems:
@@ -30,6 +32,9 @@ List of Supported WWAN Modules and Systems:
    Supported systems:
    - ThinkPad X1 Carbon Gen 12
    - ThinkPad X1 2-in-1 Gen 9
+   - ThinkPad T14 Gen 5 (Intel/AMD)
+   - ThinkPad T16 Gen 3
+   - ThinkPad T14s Gen 5 (Intel)
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.6 or later
@@ -41,6 +46,8 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad X1 2-in-1 Gen 9
    - ThinkPad L14 Gen 5
    - ThinkPad L16 Gen 1
+   - ThinkPad X13 2-in-1 Gen 5
+   - ThinkPad T14 Gen 5 (Intel/AMD)
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.5 or later
@@ -52,6 +59,11 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad L13 2-in-1 Gen 5
    - ThinkPad L14 Gen 5
    - ThinkPad L16 Gen 1
+   - ThinkPad X13 Gen 5
+   - ThinkPad X13 2-in-1 Gen 5
+   - ThinkPad T14 Gen 5 (Intel/AMD)
+   - ThinkPad T16 Gen 3
+   - ThinkPad T14s Gen 5 (Intel)
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.5 or later
@@ -60,6 +72,9 @@ List of Supported WWAN Modules and Systems:
 6) WWAN module : Quectel EM05-CN (*Please refer below required Environment) 
    Supported systems:
    - ThinkPad X1 Carbon Gen 12
+   - ThinkPad X13 Gen 5
+   - ThinkPad X13 2-in-1 Gen 5
+   - ThinkPad T14 Gen 5 (Intel)
      
    **Environment**:
    - Kernel version: 6.6 or later
@@ -85,6 +100,15 @@ Tested Operating Systems:
 2) Reboot machine (Only needed once)
 
 ------------------------------------------------------------------------
+**Please follow the procedure for uninstalling this package**
+
+1) Run the `fcc_unlock_uninstall.sh` script to
+   uninstall SAR config package and FCC unlock:
+   ```
+   chmod ugo+x fcc_unlock_uninstall.sh
+   ./fcc_unlock_uninstall.sh
+   ```
+------------------------------------------------------------------------
 Logs can be checked using **one** of the commands below:
 - `cat /var/log/syslog | grep -i dpr`
 - `journalctl`
@@ -93,10 +117,13 @@ Logs can be checked using **one** of the commands below:
 Additional Notes:
 - If the Modem disappears after the machine reboots, please
 restart it with the `systemctl restart ModemManager` command.
-- WWAN enablement is not done for USA SIM for below modules:
+- WWAN enablement is not done for USA SIM, used in below modules:
+   - Fibocom FM350
    - Quectel RM520N-GL
    - Quectel EM160R-GL
    - Quectel EM061K
+- WWAN enablement is done for USA SIM except for Verizon SIM, used in below module:
+   - Fibocom L860R+
 
   Reason: Carrier certification for USA operator is not completed and it
           will take few months to enable WWAN for USA SIM.

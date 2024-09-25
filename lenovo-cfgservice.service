@@ -1,5 +1,6 @@
 [Unit]
 Description=sar config
+After=ModemManager.service
 
 [Service]
 Type=simple
