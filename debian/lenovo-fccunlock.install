@@ -6,6 +6,7 @@ debian/mm-hook => /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/1eac:100d
 debian/mm-hook => /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/2c7c:6008
 DPR_Fcc_unlock_service /opt/fcc_lenovo/
 libmodemauth.so /opt/fcc_lenovo/lib/
+libmbimtools.so /opt/fcc_lenovo/lib/
 debian/lenovo-fccunlock.service /lib/systemd/system/
 suspend-fix/mm-wrapper.sh /opt/fcc_lenovo/suspend-fix/
 suspend-fix/apply-test-option.conf /etc/systemd/system/ModemManager.service.d/
