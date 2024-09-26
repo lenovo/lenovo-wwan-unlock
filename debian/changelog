@@ -1,3 +1,9 @@
+lenovo-wwan-unlock (2.1.2-0ubuntu2) jammy; urgency=medium
+
+  * Use native format.
+
+ -- Bin Li <bin.li@canonical.com>  Thu, 26 Sep 2024 14:15:41 +0800
+
 lenovo-wwan-unlock (2.1.2-0ubuntu1) jammy; urgency=medium
 
   * Based on upstream version 2.1.2

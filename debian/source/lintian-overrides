@@ -1,0 +1,6 @@
+lenovo-wwan-unlock source: source-is-missing [configservice_lenovo]
+lenovo-wwan-unlock source: source-is-missing [DPR_Fcc_unlock_service]
+lenovo-wwan-unlock source: source-is-missing [libconfigservice350.so]
+lenovo-wwan-unlock source: source-is-missing [libconfigserviceR+.so]
+lenovo-wwan-unlock source: source-is-missing [libmbimtools.so]
+lenovo-wwan-unlock source: source-is-missing [libmodemauth.so]
