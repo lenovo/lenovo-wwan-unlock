@@ -1,3 +1,9 @@
+lenovo-wwan-unlock (2.1.2-0ubuntu3) jammy; urgency=medium
+
+  * Fix dpkg-shlibdeps error, depends on libmm-glib0.
+
+ -- Bin Li <bin.li@canonical.com>  Thu, 26 Sep 2024 18:52:32 +0800
+
 lenovo-wwan-unlock (2.1.2-0ubuntu2) jammy; urgency=medium
 
   * Use native format.

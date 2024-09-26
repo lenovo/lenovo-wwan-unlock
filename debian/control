@@ -17,7 +17,7 @@ Rules-Requires-Root: no
 Package: lenovo-fccunlock
 Architecture: amd64
 Depends:
- ${misc:Depends}, ${shlibs:Depends}
+ ${misc:Depends}, ${shlibs:Depends}, libmm-glib0
 XB-Modaliases: ${modaliases}
 Description: Lenovo FCC unlock package
  This package performs FCC unlock with WWAN device on Lenovo machines
@@ -25,7 +25,7 @@ Description: Lenovo FCC unlock package
 Package: lenovo-cfgservice
 Architecture: amd64
 Depends:
- ${misc:Depends}, ${shlibs:Depends}
+ ${misc:Depends}, ${shlibs:Depends}, libmm-glib0
 XB-Modaliases: ${modaliases}
 Description: Lenovo SAR config package
  This package doing SAR config with WWAN device on Lenovo machines
