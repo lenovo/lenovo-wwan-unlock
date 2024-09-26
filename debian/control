@@ -1,0 +1,31 @@
+Source: lenovo-wwan-unlock
+Section: misc
+Priority: optional
+Maintainer: Commercial Engineering <commercial-engineering@canonical.com>
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-apparmor,
+ dh-modaliases,
+ dh-exec,
+ libmbim-glib4,
+ libpci3
+Standards-Version: 4.6.0
+Vcs-Browser: https://github.com/lenovo/lenovo-wwan-unlock
+Vcs-Git: https://github.com/lenovo/lenovo-wwan-unlock.git
+Rules-Requires-Root: no
+
+Package: lenovo-fccunlock
+Architecture: amd64
+Depends:
+ ${misc:Depends}, ${shlibs:Depends}, libmm-glib0
+XB-Modaliases: ${modaliases}
+Description: Lenovo FCC unlock package
+ This package performs FCC unlock with WWAN device on Lenovo machines
+
+Package: lenovo-cfgservice
+Architecture: amd64
+Depends:
+ ${misc:Depends}, ${shlibs:Depends}, libmm-glib0
+XB-Modaliases: ${modaliases}
+Description: Lenovo SAR config package
+ This package doing SAR config with WWAN device on Lenovo machines

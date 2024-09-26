@@ -1,0 +1,5 @@
+configservice_lenovo /opt/fcc_lenovo/
+debian/temp/sar_config_files /opt/fcc_lenovo
+libconfigserviceR+.so /opt/fcc_lenovo/lib/
+libconfigservice350.so /opt/fcc_lenovo/lib/
+lenovo-cfgservice.service /lib/systemd/system/

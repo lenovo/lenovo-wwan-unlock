@@ -1,0 +1,51 @@
+abi <abi/3.0>,
+
+include <tunables/global>
+
+/opt/fcc_lenovo/DPR_Fcc_unlock_service {
+  include <abstractions/base>
+  include <abstractions/dbus>
+
+  unix peer=(addr=@mbim-proxy),
+
+  /opt/fcc_lenovo/DPR_Fcc_unlock_service mr,
+  /usr/bin/dash ix,
+  /usr/bin/lspci Cx,
+  /usr/bin/mmcli ix,
+  /usr/bin/ls ix,
+  /usr/bin/grep ix,
+  /usr/bin/cut ix,
+  /usr/bin/ps Uxr,
+  /usr/sbin/dmidecode Cx,
+  /usr/libexec/mbim-proxy mrix,
+
+  owner /dev/ r,
+  owner /dev/wwan0at0 rw,
+  owner /dev/wwan0mbim0 rw,
+  owner /sys/bus/pci/devices/ r,
+  owner /sys/devices/pci0000:00/** r,
+  owner /sys/devices/virtual/dmi/id/product_family r,
+  owner /sys/firmware/dmi/tables/smbios_entry_point r,
+  owner /sys/firmware/dmi/tables/DMI r,
+  owner /var/log/fcclock.err w,
+  owner /var/log/fcclock.log w,
+
+  profile /usr/bin/lspci {
+    include <abstractions/base>
+
+    capability sys_admin,
+
+    /usr/bin/lspci mr,
+    /sys/bus/pci/devices/ r,
+    /sys/devices/** r,
+  }
+
+  profile /usr/sbin/dmidecode {
+    include <abstractions/base>
+
+    /usr/sbin/dmidecode mr,
+    /sys/firmware/dmi/tables** r,
+    /sys/firmware/efi/systab r,
+    /dev/mem r,
+  }
+}
