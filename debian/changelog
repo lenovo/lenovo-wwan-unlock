@@ -1,3 +1,10 @@
+lenovo-wwan-unlock (2.1.2-22.04ubuntu2) jammy; urgency=medium
+
+  * Updated the apparmor profile to allow the app access the
+    library in /opt/fcc_lenovo/lib/*.so.
+
+ -- Bin Li <bin.li@canonical.com>  Fri, 27 Sep 2024 23:26:18 +0800
+
 lenovo-wwan-unlock (2.1.2-22.04ubuntu1) jammy; urgency=medium
 
   * Bump a new version with 22.04.

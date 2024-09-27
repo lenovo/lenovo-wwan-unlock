@@ -18,6 +18,7 @@ include <tunables/global>
   /usr/bin/ps Uxr,
   /usr/sbin/dmidecode Cx,
   /usr/libexec/mbim-proxy mrix,
+  /opt/fcc_lenovo/lib/*.so mrix,
 
   owner /dev/ r,
   owner /dev/wwan0at0 rw,
