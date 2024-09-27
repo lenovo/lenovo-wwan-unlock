@@ -130,7 +130,7 @@ restart it with the `systemctl restart ModemManager` command.
 ------------------------------------------------------------------------
 Deb packages for Ubuntu 22.04:
 ```
-$ sudo add-apt-repository ppa:lenovo-oem/wwan
+$ sudo add-apt-repository ppa:lenovo-oem/preload
 $ sudo apt update
 ```
 Check if your system is supported, if there is no output, then your system is not supported.
