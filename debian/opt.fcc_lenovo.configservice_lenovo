@@ -16,6 +16,7 @@ include <tunables/global>
   /usr/bin/ls ix,
   /usr/bin/ps Uxr,
   /usr/sbin/dmidecode Cx,
+  /opt/fcc_lenovo/lib/*.so mrix,
 
   owner /dev/ r,
   owner /dev/wwan0at0 rw,

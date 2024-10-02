@@ -1,3 +1,22 @@
+lenovo-wwan-unlock (2.1.2-22.04ubuntu2) jammy; urgency=medium
+
+  * Updated the apparmor profile to allow the app access the
+    library in /opt/fcc_lenovo/lib/*.so.
+
+ -- Bin Li <bin.li@canonical.com>  Fri, 27 Sep 2024 23:26:18 +0800
+
+lenovo-wwan-unlock (2.1.2-22.04ubuntu1) jammy; urgency=medium
+
+  * Bump a new version with 22.04.
+
+ -- Bin Li <bin.li@canonical.com>  Fri, 27 Sep 2024 11:33:47 +0800
+
+lenovo-wwan-unlock (2.1.2-0ubuntu4) jammy; urgency=medium
+
+  * Move libmm-glib0 to BuildDepends.
+
+ -- Bin Li <bin.li@canonical.com>  Thu, 26 Sep 2024 19:03:02 +0800
+
 lenovo-wwan-unlock (2.1.2-0ubuntu3) jammy; urgency=medium
 
   * Fix dpkg-shlibdeps error, depends on libmm-glib0.
