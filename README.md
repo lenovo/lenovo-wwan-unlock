@@ -119,14 +119,14 @@ Logs can be checked using **one** of the commands below:
   1) **For FCC Unlock**:
   Add "-v" in FCC unlock scripts updated in "fcc-unlock.d.tar.gz", for example:
 
-  FileName - fcc-unlock.d/8086:7560
+      FileName - fcc-unlock.d/8086:7560
   
-  Modification- "./opt/fcc_lenovo/DPR_Fcc_unlock_service **-v**"
+      Modification- "./opt/fcc_lenovo/DPR_Fcc_unlock_service **-v**"
 
-  3) **For SAR Config**:
-  Add "-v" in systemd service file, for example:
+  2) **For SAR Config**:
+      Add "-v" in systemd service file, for example:
 
-  FileName - lenovo-cfgservice.service
+      FileName - lenovo-cfgservice.service
   
   Modification- "ExecStart=/opt/fcc_lenovo/configservice_lenovo **-v**"    
 
