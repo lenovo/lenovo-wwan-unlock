@@ -15,7 +15,7 @@ include <tunables/global>
   /usr/bin/ls ix,
   /usr/bin/grep ix,
   /usr/bin/cut ix,
-  /usr/bin/ps Uxr,
+  /usr/bin/ps Cx,
   /usr/sbin/dmidecode Cx,
   /usr/libexec/mbim-proxy mrix,
   /opt/fcc_lenovo/lib/*.so mrix,
