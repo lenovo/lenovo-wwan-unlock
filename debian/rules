@@ -14,7 +14,6 @@ override_dh_auto_configure:
 
 override_dh_installsystemd:
 	dh_installsystemd -p lenovo-cfgservice lenovo-cfgservice.service
-	dh_installsystemd -p lenovo-fccunlock lenovo-fccunlock.service --no-enable --no-start
 
 execute_after_dh_install:
 	install -m 0644 -D debian/opt.fcc_lenovo.configservice_lenovo -t debian/lenovo-cfgservice/etc/apparmor.d
