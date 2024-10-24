@@ -20,6 +20,7 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad T16 Gen 2
    - ThinkPad L14 Gen 4
    - ThinkPad L15 Gen 4
+   - ThinkPad P14s Gen 4
 
 2) WWAN module : Fibocom FM350 5G  
    Supported systems:
@@ -35,6 +36,7 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad T14 Gen 5 (Intel/AMD)
    - ThinkPad T16 Gen 3
    - ThinkPad T14s Gen 5 (Intel)
+   - ThinkPad T14s Gen 6 (AMD)
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.6 or later
@@ -110,8 +112,23 @@ Tested Operating Systems:
    ```
 ------------------------------------------------------------------------
 Logs can be checked using **one** of the commands below:
-- `cat /var/log/syslog | grep -i dpr`
+- For FCC Unlock: `cat /var/log/syslog | grep -i DPR_Fcc_unlock_service`
+- For SAR Config: `cat /var/log/syslog | grep -i configservice_lenovo`
 - `journalctl`
+- Please follow below steps to enable **Verbose** logging:
+  1) **For FCC Unlock**:
+  Add "-v" in FCC unlock scripts updated in "fcc-unlock.d.tar.gz", for example:
+
+      FileName - fcc-unlock.d/8086:7560
+  
+      Modification- "./opt/fcc_lenovo/DPR_Fcc_unlock_service **-v**"
+
+  2) **For SAR Config**:
+      Add "-v" in systemd service file, for example:
+
+      FileName - lenovo-cfgservice.service
+  
+  Modification- "ExecStart=/opt/fcc_lenovo/configservice_lenovo **-v**"    
 
 ------------------------------------------------------------------------
 Additional Notes:
