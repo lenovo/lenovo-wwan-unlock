@@ -4,4 +4,4 @@ Description=fccunlock
 [Service]
 Type=oneshot
 User=root
-ExecStart=/opt/fcc_lenovo/DPR_Fcc_unlock_service
+ExecStart=/opt/fcc_lenovo/DPR_Fcc_unlock_service -v
