@@ -1,3 +1,10 @@
+lenovo-wwan-unlock (2.1.3-24.04ubuntu2) noble; urgency=medium
+
+  * Merge the two packages into one and use pci/usb id as modalias.
+    https://github.com/lenovo/lenovo-wwan-unlock/issues/45
+
+ -- Bin Li <binli@ubuntu.com>  Mon, 13 Jan 2025 16:42:12 +0800
+
 lenovo-wwan-unlock (2.1.3-24.04ubuntu1) noble; urgency=medium
 
   * Bump a new version for 24.04.
