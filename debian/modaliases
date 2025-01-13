@@ -1,0 +1,5 @@
+alias pci:v00001EACd00001007sv*sd*bc*sc* oem lenovo-wwan-unlock
+alias pci:v00001EACd0000100dsv*sd*bc*sc* oem lenovo-wwan-unlock
+alias pci:v00008086d00007560sv*sd*bc*sc* oem lenovo-wwan-unlock
+alias pci:v000014C3d00004D75sv*sd*bc*sc* oem lenovo-wwan-unlock
+alias usb:v2C7Cp6008d*dc*dsc*dp*ic*isc*ip* oem lenovo-wwan-unlock

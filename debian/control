@@ -15,18 +15,11 @@ Vcs-Browser: https://github.com/lenovo/lenovo-wwan-unlock
 Vcs-Git: https://github.com/lenovo/lenovo-wwan-unlock.git
 Rules-Requires-Root: no
 
-Package: lenovo-fccunlock
+Package: lenovo-wwan-unlock
 Architecture: amd64
 Depends:
  ${misc:Depends}, ${shlibs:Depends}
 XB-Modaliases: ${modaliases}
-Description: Lenovo FCC unlock package
- This package performs FCC unlock with WWAN device on Lenovo machines
-
-Package: lenovo-cfgservice
-Architecture: amd64
-Depends:
- ${misc:Depends}, ${shlibs:Depends}
-XB-Modaliases: ${modaliases}
-Description: Lenovo SAR config package
- This package doing SAR config with WWAN device on Lenovo machines
+Description: Lenovo FCC unlock and SAR config package
+ This package performs FCC unlock and doing SAR config with WWAN device
+ on Lenovo machines.
