@@ -8,5 +8,3 @@ DPR_Fcc_unlock_service /opt/fcc_lenovo/
 libmodemauth.so /opt/fcc_lenovo/lib/
 libmbimtools.so /opt/fcc_lenovo/lib/
 debian/lenovo-fccunlock.service /lib/systemd/system/
-suspend-fix/mm-wrapper.sh /opt/fcc_lenovo/suspend-fix/
-suspend-fix/apply-test-option.conf /etc/systemd/system/ModemManager.service.d/
