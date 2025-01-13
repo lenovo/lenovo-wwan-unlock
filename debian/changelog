@@ -1,3 +1,22 @@
+lenovo-wwan-unlock (2.1.3-22.04ubuntu2) jammy; urgency=medium
+
+  * Removing the '--test-quick-suspend-resume' workaround, it will cause
+    side effects. (LP: #2054283)
+    One is the radio power option massed after suspend. The radio status is
+    enabled, but the dbus feedbacks the radiopower is off.
+
+    'GDBus.Error:org.freedesktop.libmbim.Error.Status.RadioPowerOff:
+    RadioPowerOff'
+
+    https://bugs.launchpad.net/sutton/+bug/2089215
+
+    Second, casue of the wrong status of raidiopower, the wwan connection
+    could not be connected automatically.
+
+    https://bugs.launchpad.net/sutton/+bug/2089227
+
+ -- Bin Li <binli@ubuntu.com>  Mon, 13 Jan 2025 13:31:18 +0800
+
 lenovo-wwan-unlock (2.1.3-22.04ubuntu1) jammy; urgency=medium
 
   * Bump a new version for v2.1.3.
