@@ -19,9 +19,6 @@ fi
 ### Identify current OS
 OS_UBUNTU="Ubuntu"
 OS_FEDORA="Fedora"
-### Identify current OS
-OS_UBUNTU="Ubuntu"
-OS_FEDORA="Fedora"
 
 source /etc/os-release
 echo $NAME
