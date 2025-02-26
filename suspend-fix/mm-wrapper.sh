@@ -3,7 +3,6 @@
 
 MM_TEST_OPTIONS=(
 	"--test-low-power-suspend-resume"
-	"--test-quick-suspend-resume"
 )
 
 base_execstart() {
