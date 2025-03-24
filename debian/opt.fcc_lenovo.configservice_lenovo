@@ -15,6 +15,7 @@ include <tunables/global>
   /usr/bin/grep ix,
   /usr/bin/ls ix,
   /usr/bin/lspci Cx,
+  /usr/bin/lsusb Cx,
   /usr/bin/mmcli Cx -> mmcli,
   /usr/bin/ps Cx -> ps,
   /usr/libexec/mbim-proxy mrix,
@@ -26,6 +27,7 @@ include <tunables/global>
   owner /opt/fcc_lenovo/sar_config_files/* r,
   owner /run/* rw,
   owner /sys/devices/virtual/dmi/id/product_family r,
+  owner /sys/devices/virtual/dmi/id/product_name r,
   owner /sys/firmware/dmi/tables/DMI r,
   owner /sys/firmware/dmi/tables/smbios_entry_point r,
 
@@ -45,6 +47,11 @@ include <tunables/global>
     /usr/bin/lspci mr,
     /usr/share/misc/pci.ids r,
 
+  }
+
+  profile /usr/bin/lsusb flags=(complain) {
+    include <abstractions/base>
+    /usr/bin/lsusb mr,
   }
 
   profile /usr/sbin/dmidecode {
