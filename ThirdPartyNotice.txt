@@ -1,9 +1,9 @@
-		Third-Party Software for wwan-fcc-unlock (bin), v2.4.x 
+		Third-Party Software for wwan-fcc-unlock (bin), v3.0.x 
 
 The following 3rd-party software packages may be used by or distributed with wwan-fcc-unlock bin package. Any information relevant to third-party vendors listed below are collected using common, reasonable means.
 
-Date generated: 2024-12-13
-Revision ID: 2.4.0
+Date generated: 2025-03-11
+Revision ID: 3.0.0
 --------------------------------------------------------------------------------
 Package Title: libmodemauth.so (1.0) 
 Package Title: libconfigservice350.so (1.0)
