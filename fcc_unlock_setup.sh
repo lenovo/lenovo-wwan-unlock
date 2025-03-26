@@ -13,6 +13,7 @@ sudo chmod ugo+x /usr/lib/ModemManager/fcc-unlock.d/*
 
 ### Copy libraries
 sudo cp -rvf libmbimtools.so /usr/lib/
+sudo cp -rvf libdpr.so.2.0.1 /usr/lib/
 
 ### Copy binary
 sudo cp -rvf DPR_Fcc_unlock_service /opt/fcc_lenovo/

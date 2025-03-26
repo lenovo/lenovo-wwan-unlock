@@ -14,6 +14,10 @@ List of Supported WWAN Modules and Systems:
    Supported systems:
    - ThinkEdge SE10
 
+3) WWAN module : Foxconn SDX55 5G
+   Supported systems:
+   - ThinkEdge SE30
+
 Enablement is done on a Module + System basis. **Systems not listed 
 are currently not supported.**
 
