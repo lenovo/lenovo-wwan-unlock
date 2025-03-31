@@ -148,18 +148,3 @@ restart it with the `systemctl restart ModemManager` command.
   Reason: Carrier certification for USA operator is not completed and it
           will take few months to enable WWAN for USA SIM.
 ------------------------------------------------------------------------
-Deb packages for Ubuntu 22.04:
-```
-$ sudo add-apt-repository ppa:lenovo-oem/wwan
-$ sudo apt update
-```
-Check if your system is supported, if there is no output, then your system is not supported.
-```
-$ ubuntu-drivers list
-lenovo-fccunlock
-lenovo-cfgservice
-```
-Install the packages
-```
-$ sudo apt install lenovo-fccunlock lenovo-cfgservice
-```
