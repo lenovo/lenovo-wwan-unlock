@@ -28,6 +28,7 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad X1 Yoga Gen 8
    - ThinkPad X1 Carbon Gen 10
    - ThinkPad X1 Carbon Gen 11
+   - ThinkPad X13 Gen 5
 
 3) WWAN module : Quectel RM520N-GL (*Please refer below required Environment)
    Supported systems:
@@ -37,6 +38,8 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad T16 Gen 3
    - ThinkPad T14s Gen 5 (Intel)
    - ThinkPad T14s Gen 6 (AMD)
+   - ThinkPad X1 Carbon Gen 13 (LNL)
+   - ThinkPad X1 2-in-1 Gen 10 (LNL)
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.6 or later
@@ -145,18 +148,3 @@ restart it with the `systemctl restart ModemManager` command.
   Reason: Carrier certification for USA operator is not completed and it
           will take few months to enable WWAN for USA SIM.
 ------------------------------------------------------------------------
-Deb packages for Ubuntu 22.04:
-```
-$ sudo add-apt-repository ppa:lenovo-oem/wwan
-$ sudo apt update
-```
-Check if your system is supported, if there is no output, then your system is not supported.
-```
-$ ubuntu-drivers list
-lenovo-fccunlock
-lenovo-cfgservice
-```
-Install the packages
-```
-$ sudo apt install lenovo-fccunlock lenovo-cfgservice
-```

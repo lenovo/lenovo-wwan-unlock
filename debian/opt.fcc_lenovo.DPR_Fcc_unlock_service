@@ -15,6 +15,7 @@ include <tunables/global>
   /usr/bin/grep ix,
   /usr/bin/ls ix,
   /usr/bin/lspci Cx,
+  /usr/bin/lsusb Cx,
   /usr/bin/mmcli ix,
   /usr/bin/ps Cx -> ps,
   /usr/sbin/dmidecode Cx,
@@ -26,6 +27,7 @@ include <tunables/global>
   owner /sys/bus/pci/devices/ r,
   owner /sys/devices/pci0000:00/** r,
   owner /sys/devices/virtual/dmi/id/product_family r,
+  owner /sys/devices/virtual/dmi/id/product_name r,
   owner /sys/firmware/dmi/tables/DMI r,
   owner /sys/firmware/dmi/tables/smbios_entry_point r,
   owner /var/log/fcclock.err w,
@@ -47,6 +49,11 @@ include <tunables/global>
     /usr/bin/lspci mr,
     /usr/share/misc/pci.ids r,
 
+  }
+
+  profile /usr/bin/lsusb flags=(complain) {
+    include <abstractions/base>
+    /usr/bin/lsusb mr,
   }
 
   profile /usr/sbin/dmidecode {
