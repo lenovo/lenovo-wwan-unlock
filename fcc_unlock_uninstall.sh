@@ -68,14 +68,28 @@ then
 fi
 sudo systemctl daemon-reload
 
-PACKAGE_DIR=$(dirname "$0")
-source "$PACKAGE_DIR"/suspend-fix/install.sh
+## modify ModemManager.service to delete "--test-low-power-suspend-resume "
+SERVICE_FILE="/lib/systemd/system/ModemManager.service"
+STRING_LOW_POWER=" --test-low-power-suspend-resume"
+Rplus_check=$(lspci -d :7560)
+FM350_check=$(lspci -d :4d75)
+RM520_check=$(lspci -d :1007)
+EM160R_check=$(lspci -d :100d)
+CURRENT_CONFIG=$(cat "$SERVICE_FILE")
 
-# Delete the drop-in file if it exists
-if [ -f "$MM_DROPIN_DIR/$MM_DROPIN_FILENAME" ]; then
-    sudo rm -f "$MM_DROPIN_DIR/$MM_DROPIN_FILENAME"
-    sudo systemctl daemon-reload
-    sudo systemctl restart ModemManager.service
+restart_mm_service=false
+
+if [ -n "$Rplus_check" ] || [ -n "$FM350_check" ] || [ -n "$RM520_check" ] || [ -n "$EM160R_check" ]; then
+	if grep -q 'test-low-power-suspend-resume' <<< "$CURRENT_CONFIG";then
+		sudo sed -i "s/${STRING_LOW_POWER}//g" ${SERVICE_FILE}
+		restart_mm_service=true
+	fi
+
+	if [ "$restart_mm_service" == "true" ]
+	then
+		sudo systemctl daemon-reload
+		sudo systemctl restart ModemManager
+	fi
 fi
 
 echo "fcc unlock package is uninstalled"
