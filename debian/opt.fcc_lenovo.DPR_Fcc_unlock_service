@@ -13,6 +13,7 @@ include <tunables/global>
   /usr/bin/cut ix,
   /usr/bin/dash ix,
   /usr/bin/grep ix,
+  /usr/bin/gnuls ix,
   /usr/bin/ls ix,
   /usr/bin/lspci Cx,
   /usr/bin/lsusb Cx,
