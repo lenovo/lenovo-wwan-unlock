@@ -28,6 +28,7 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad X1 Yoga Gen 8
    - ThinkPad X1 Carbon Gen 10
    - ThinkPad X1 Carbon Gen 11
+   - ThinkPad X13 Gen 5
 
 3) WWAN module : Quectel RM520N-GL (*Please refer below required Environment)
    Supported systems:
