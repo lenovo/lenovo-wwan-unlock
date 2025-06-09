@@ -28,7 +28,6 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad X1 Yoga Gen 8
    - ThinkPad X1 Carbon Gen 10
    - ThinkPad X1 Carbon Gen 11
-   - ThinkPad X13 Gen 5
 
 3) WWAN module : Quectel RM520N-GL (*Please refer below required Environment)
    Supported systems:
@@ -38,8 +37,12 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad T16 Gen 3
    - ThinkPad T14s Gen 5 (Intel)
    - ThinkPad T14s Gen 6 (AMD)
-   - ThinkPad X1 Carbon Gen 13 (LNL)
-   - ThinkPad X1 2-in-1 Gen 10 (LNL)
+2025:
+   - ThinkPad X1 Carbon Gen 13
+   - ThinkPad X1 2-in-1 Gen 10
+   - ThinkPad T14 Gen 6 (Intel)
+   - ThinkPad T14s Gen 6 (Intel/AMD)
+   - ThinkPad T16 Gen 4 (Intel)
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.6 or later
@@ -53,6 +56,12 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad L16 Gen 1
    - ThinkPad X13 2-in-1 Gen 5
    - ThinkPad T14 Gen 5 (Intel/AMD)
+2025:
+   - ThinkPad X1 Carbon Gen 13 (ARL only)
+   - ThinkPad X1 2-in-1 Gen 10 (ARL only)
+   - ThinkPad P16s Gen 4
+   - ThinkPad L14 Gen 6 (Intel/AMD)
+   - ThinkPad T14 Gen 6 (Intel)
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.5 or later
@@ -69,6 +78,15 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad T14 Gen 5 (Intel/AMD)
    - ThinkPad T16 Gen 3
    - ThinkPad T14s Gen 5 (Intel)
+2025:
+   - ThinkPad L13 Gen 6 (Intel/AMD)
+   - ThinkPad L13 2-in-1 Gen 6 (Intel/AMD)
+   - ThinkPad L14 Gen 6 (Intel/AMD)
+   - ThinkPad L16 Gen 2 (Intel/AMD)
+   - ThinkPad T14 Gen 6 (Intel)
+   - ThinkPad T14s Gen 6 (Intel/AMD)
+   - ThinkPad T16 Gen 4 (Intel)
+   - ThinkPad X13 Gen 6 (Intel/AMD)
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.5 or later
