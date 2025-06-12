@@ -82,8 +82,8 @@ sudo chmod ugo+x /opt/fcc_lenovo/*
 ### Issue List:
 ### 1) System sometimes wake up during suspend mode, while using Fibocom
 ###    L860-GL-16/FM350 and Quectel EM160R-GL/RM520N-GL WWAN module.
-sudo chmod ugo+x suspend-fix/install.sh
-suspend-fix/install.sh
+sudo chmod ugo+x suspend-fix/wwan_issue_fix.sh
+suspend-fix/wwan_issue_fix.sh
 
 
 ## Please reboot machine (this will be needed only one for time)##
