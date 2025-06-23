@@ -44,7 +44,7 @@ install_dropin() {
 	sudo mkdir -p "$FCC_LENOVO_DIR/suspend-fix"
 	sudo cp -vf "$MM_SUSPEND_FIX_DIR/mm-wrapper.sh" "$FCC_LENOVO_DIR/suspend-fix"
 	sudo chmod ugo+x "$FCC_LENOVO_DIR/suspend-fix/mm-wrapper.sh"
-	
+
 	sudo systemctl daemon-reload
 	sudo systemctl restart ModemManager.service
 }

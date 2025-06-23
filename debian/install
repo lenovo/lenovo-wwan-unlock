@@ -13,3 +13,5 @@ libconfigserviceR+.so /opt/fcc_lenovo/lib/
 libconfigservice350.so /opt/fcc_lenovo/lib/
 lenovo-cfgservice.service /lib/systemd/system/
 debian/lenovo-fccunlock.service /lib/systemd/system/
+suspend-fix/mm-wrapper.sh /opt/fcc_lenovo/suspend-fix/
+suspend-fix/apply-test-option.conf /etc/systemd/system/ModemManager.service.d/
