@@ -24,7 +24,7 @@ include <tunables/global>
   owner /dev/ r,
   owner /dev/wwan0at0 rw,
   owner /dev/wwan0mbim0 rw,
-  owner /opt/fcc_lenovo/sar_config_files/* r,
+  owner /opt/fcc_lenovo/sar_config_files/** r,
   owner /run/* rw,
   owner /sys/devices/virtual/dmi/id/product_family r,
   owner /sys/devices/virtual/dmi/id/product_name r,
