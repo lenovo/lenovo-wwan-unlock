@@ -1,3 +1,10 @@
+lenovo-wwan-unlock (3.0.1-24.04ubuntu1) noble; urgency=medium
+
+  * Add '--test-low-power-suspend-resume'. (JIRA: SUTTON-2242)
+  * Sync the latest binary files.
+
+ -- Bin Li <binli@ubuntu.com>  Wed, 25 Jun 2025 11:58:59 +0800
+
 lenovo-wwan-unlock (3.0.0-24.04ubuntu2) noble; urgency=medium
 
   * gnuls replaced ls on questing(25.10).
