@@ -1,3 +1,9 @@
+lenovo-wwan-unlock (3.0.1-24.04ubuntu2) noble; urgency=medium
+
+  * Separated drop-in service into a single package.
+
+ -- Bin Li <binli@ubuntu.com>  Tue, 26 Aug 2025 16:43:42 +0800
+
 lenovo-wwan-unlock (3.0.1-24.04ubuntu1) noble; urgency=medium
 
   * Add '--test-low-power-suspend-resume'. (JIRA: SUTTON-2242)

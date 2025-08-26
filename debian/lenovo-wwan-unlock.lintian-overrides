@@ -1,0 +1,7 @@
+# This package hardcoded path in /opt
+lenovo-wwan-unlock: dir-or-file-in-opt
+
+# dh-modaliases uses this field, which does not exist in Debian
+lenovo-wwan-unlock: unknown-field Modaliases
+
+lenovo-wwan-unlock: debug-file-with-no-debug-symbols
