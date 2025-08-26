@@ -1,0 +1,2 @@
+suspend-fix/mm-wrapper.sh /opt/fcc_lenovo/suspend-fix/
+suspend-fix/apply-test-option.conf /etc/systemd/system/ModemManager.service.d/
