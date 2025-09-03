@@ -35,6 +35,14 @@ then
 	then
 		sudo rm -rf /usr/lib/libmbimtools.so
 	fi
+	if [ -e "/usr/lib/libmodemauth.so.1.1" ]
+        then
+                sudo rm -rf /usr/lib/libmodemauth.so.1.1
+        fi
+	if [ -e "/usr/lib/libconfigservice350.so.1.1" ]
+        then
+                sudo rm -rf /usr/lib/libconfigservice350.so.1.1
+        fi
 elif [[ "$NAME" == *"$OS_FEDORA"* ]]
 then
 	if [ -d "/usr/lib64/ModemManager/fcc-unlock.d" ]
@@ -57,6 +65,14 @@ then
 	then
 		sudo rm -rf /usr/lib/libmbimtools.so
 	fi
+	if [ -e "/usr/lib64/libmodemauth.so.1.1" ]
+        then
+                sudo rm -rf /usr/lib64/libmodemauth.so.1.1
+        fi
+	if [ -e "/usr/lib/libconfigservice350.so.1.1" ]
+        then
+                sudo rm -rf /usr/lib/libconfigservice350.so.1.1
+        fi
 else
     exit 0
 fi

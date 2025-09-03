@@ -34,8 +34,10 @@ then
 
 	### Copy libraries
 	sudo cp -rvf libmodemauth.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libmodemauth.so.1.1 /opt/fcc_lenovo/lib/
 	sudo cp -rvf libconfigserviceR+.so /opt/fcc_lenovo/lib/
 	sudo cp -rvf libconfigservice350.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libconfigservice350.so.1.1 /opt/fcc_lenovo/lib/
 	sudo cp -rvf libmbimtools.so /opt/fcc_lenovo/lib/
 
 elif [[ "$NAME" == *"$OS_FEDORA"* ]]
@@ -51,8 +53,10 @@ then
 
 	### Copy libraries
 	sudo cp -rvf libmodemauth.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libmodemauth.so.1.1 /opt/fcc_lenovo/lib/
 	sudo cp -rvf libconfigserviceR+.so /opt/fcc_lenovo/lib/
 	sudo cp -rvf libconfigservice350.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libconfigservice350.so.1.1 /opt/fcc_lenovo/lib/
 	sudo cp -rvf libmbimtools.so /opt/fcc_lenovo/lib/
 
 	### Copy files for selinux for fedora

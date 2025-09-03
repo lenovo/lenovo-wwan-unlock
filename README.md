@@ -42,9 +42,11 @@ List of Supported WWAN Modules and Systems:
      -- **Below are list of 2025 products** --
    - ThinkPad X1 Carbon Gen 13
    - ThinkPad X1 2-in-1 Gen 10
-   - ThinkPad T14 Gen 6 (Intel)
+   - ThinkPad T14 Gen 6 (Intel/AMD)
    - ThinkPad T14s Gen 6 (Intel/AMD)
    - ThinkPad T16 Gen 4 (Intel)
+   - ThinkPad P16s Gen 4 AMD
+   - ThinkPad P14s Gen 6 AMD
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.6 or later
@@ -64,7 +66,8 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad X1 2-in-1 Gen 10 (ARL only)
    - ThinkPad P16s Gen 4
    - ThinkPad L14 Gen 6 (Intel/AMD)
-   - ThinkPad T14 Gen 6 (Intel)
+   - ThinkPad T14 Gen 6 (Intel/AMD)
+   - ThinkPad P14s Gen 6 AMD
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.5 or later
@@ -87,10 +90,11 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad L13 2-in-1 Gen 6 (Intel/AMD)
    - ThinkPad L14 Gen 6 (Intel/AMD)
    - ThinkPad L16 Gen 2 (Intel/AMD)
-   - ThinkPad T14 Gen 6 (Intel)
+   - ThinkPad T14 Gen 6 (Intel/AMD)
    - ThinkPad T14s Gen 6 (Intel/AMD)
    - ThinkPad T16 Gen 4 (Intel)
    - ThinkPad X13 Gen 6 (Intel/AMD)
+   - ThinkPad T14s 2-in-1 Gen 1 (Intel)
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.5 or later
@@ -107,6 +111,12 @@ List of Supported WWAN Modules and Systems:
    - Kernel version: 6.6 or later
    - ModemManager version: 1.21.2 or later
 
+7) WWAN module : Rolling Wireless RW350 
+   Supported systems:
+   - ThinkPad T14s 2-in-1 Gen 1 (Intel)
+   - ThinkPad X13 Gen 6
+   - ThinkPad P16 Gen 3
+     
 Enablement is done on a Module + System basis. **Systems not listed 
 are currently not supported.**
 
