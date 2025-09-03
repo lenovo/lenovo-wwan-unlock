@@ -44,7 +44,7 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad X1 2-in-1 Gen 10
    - ThinkPad T14 Gen 6 (Intel/AMD)
    - ThinkPad T14s Gen 6 (Intel/AMD)
-   - ThinkPad T16 Gen 4 (Intel)
+   - ThinkPad T16 Gen 4 (Intel/AMD)
    - ThinkPad P16s Gen 4 AMD
    - ThinkPad P14s Gen 6 AMD
      
@@ -92,7 +92,7 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad L16 Gen 2 (Intel/AMD)
    - ThinkPad T14 Gen 6 (Intel/AMD)
    - ThinkPad T14s Gen 6 (Intel/AMD)
-   - ThinkPad T16 Gen 4 (Intel)
+   - ThinkPad T16 Gen 4 (Intel/AMD)
    - ThinkPad X13 Gen 6 (Intel/AMD)
    - ThinkPad T14s 2-in-1 Gen 1 (Intel)
      
