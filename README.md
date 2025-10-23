@@ -116,6 +116,7 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad T14s 2-in-1 Gen 1 (Intel)
    - ThinkPad X13 Gen 6
    - ThinkPad P16 Gen 3
+   - ThinkPad P16v Gen 3
      
 Enablement is done on a Module + System basis. **Systems not listed 
 are currently not supported.**
