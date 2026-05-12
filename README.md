@@ -118,13 +118,25 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad P16 Gen 3
    - ThinkPad P16v Gen 3
      
+8) WWAN module : Foxconn SDX61 
+   Supported systems:
+   - ThinkPad X1 2-in-1 Gen 11
+   - ThinkPad X1 Carbon Gen 14
+
+9) WWAN module : Rolling Wireless RW101R-GL 
+   Supported systems:
+   - ThinkPad X1 2-in-1 Gen 11
+   - ThinkPad X1 Carbon Gen 14
+   - ThinkPad L14 Gen 7 
+   - ThinkPad L16 Gen 3
+
 Enablement is done on a Module + System basis. **Systems not listed 
 are currently not supported.**
 
 ------------------------------------------------------------------------
 Tested Operating Systems:
 - Ubuntu 22.04 : OK
-- Fedora: OK
+- Fedora: OK (Not tested for RW101 and Foxconn SDX61 modem)
 
 ------------------------------------------------------------------------
 **Please follow the procedure below step by step to enable WWAN**
@@ -170,14 +182,9 @@ Logs can be checked using **one** of the commands below:
 Additional Notes:
 - If the Modem disappears after the machine reboots, please
 restart it with the `systemctl restart ModemManager` command.
-- WWAN enablement is not done for USA SIM, used in below modules:
-   - Fibocom FM350
-   - Quectel RM520N-GL
-   - Quectel EM160R-GL
-   - Quectel EM061K
-- WWAN enablement is done for USA SIM except for Verizon SIM, used in below module:
-   - Fibocom L860R+
 
-  Reason: Carrier certification for USA operator is not completed and it
-          will take few months to enable WWAN for USA SIM.
+- WWAN enablement is currently blocked for the USA SIM, as carrier certification 
+for Linux is not being pursued at this time. However, I will provide an update 
+if the situation changes in the future.
+
 ------------------------------------------------------------------------
