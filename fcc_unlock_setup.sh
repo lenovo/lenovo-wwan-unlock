@@ -16,6 +16,11 @@ then
         sudo mkdir /opt/fcc_lenovo/lib
 fi
 
+if [ ! -d "/opt/fcc_lenovo/DEV_OTA_PACKAGE" ]
+then
+        sudo mkdir /opt/fcc_lenovo/DEV_OTA_PACKAGE
+fi
+
 ### Identify current OS
 OS_UBUNTU="Ubuntu"
 OS_FEDORA="Fedora"
@@ -29,20 +34,28 @@ then
 	sudo tar -zxf fcc-unlock.d.tar.gz -C /usr/lib/x86_64-linux-gnu/ModemManager/
 	sudo chmod ugo+x /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/*
 
+	sudo tar -zxf DEV_OTA_PACKAGE.tar.gz -C /opt/fcc_lenovo/
+
 	### Copy SAR config files
 	sudo tar -zxf sar_config_files.tar.gz -C /opt/fcc_lenovo/
 
 	### Copy libraries
 	sudo cp -rvf libmodemauth.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libmodemauth.so.1.1 /opt/fcc_lenovo/lib/
 	sudo cp -rvf libconfigserviceR+.so /opt/fcc_lenovo/lib/
 	sudo cp -rvf libconfigservice350.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libconfigservice350.so.1.2 /opt/fcc_lenovo/lib/
+	sudo cp -rvf libconfigservice101.so.1.2 /opt/fcc_lenovo/lib/
 	sudo cp -rvf libmbimtools.so /opt/fcc_lenovo/lib/
-
+	sudo cp -rvf libfiisdk.so.2.2.2 /opt/fcc_lenovo/lib/
+	sudo cp -rvf libmodemauthRW101.so.1.1 /opt/fcc_lenovo/lib/
 elif [[ "$NAME" == *"$OS_FEDORA"* ]]
 then
 	### Copy fcc unlock script for MM
 	sudo tar -zxf fcc-unlock.d.tar.gz -C /usr/lib64/ModemManager/
 	sudo chmod ugo+x /usr/lib64/ModemManager/fcc-unlock.d/*
+
+	sudo tar -zxf DEV_OTA_PACKAGE.tar.gz -C /opt/fcc_lenovo/
 
 	### Copy SAR config files
 	sudo tar -zxf sar_config_files.tar.gz -C /opt/fcc_lenovo/
@@ -51,9 +64,14 @@ then
 
 	### Copy libraries
 	sudo cp -rvf libmodemauth.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libmodemauth.so.1.1 /opt/fcc_lenovo/lib/
 	sudo cp -rvf libconfigserviceR+.so /opt/fcc_lenovo/lib/
 	sudo cp -rvf libconfigservice350.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libconfigservice350.so.1.2 /opt/fcc_lenovo/lib/
+	sudo cp -rvf libconfigservice101.so.1.2 /opt/fcc_lenovo/lib/
 	sudo cp -rvf libmbimtools.so /opt/fcc_lenovo/lib/
+	sudo cp -rvf libfiisdk.so.2.2.2 /opt/fcc_lenovo/lib/
+	sudo cp -rvf libmodemauthRW101.so.1.1 /opt/fcc_lenovo/lib/
 
 	### Copy files for selinux for fedora
 	sudo cp -rvf mm_FccUnlock.cil /opt/fcc_lenovo
@@ -78,12 +96,18 @@ systemctl enable lenovo-cfgservice
 ### Grant permissions to all binaries and script
 sudo chmod ugo+x /opt/fcc_lenovo/*
 
+### fastboot installation is required for RW101R Modem
+ID_PATTERN="33f8:0301|33f8:0302"
+if lsusb | grep -E -q "$ID_PATTERN"; then
+	sudo apt install fastboot
+fi
+
 ### Below mentioned script is executed to fix issues related to WWAN.
 ### Issue List:
 ### 1) System sometimes wake up during suspend mode, while using Fibocom
-###    L860-GL-16/FM350 and Quectel EM160R-GL/RM520N-GL WWAN module.
-sudo chmod ugo+x suspend-fix/install.sh
-suspend-fix/install.sh
+###    L860-GL-16/FM350 ,Quectel EM160R-GL/RM520N-GL and Foxconn SDX61 WWAN module.
+sudo chmod ugo+x suspend-fix/wwan_issue_fix.sh
+suspend-fix/wwan_issue_fix.sh
 
 
 ## Please reboot machine (this will be needed only one for time)##

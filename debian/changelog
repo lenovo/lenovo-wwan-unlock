@@ -1,3 +1,33 @@
+lenovo-wwan-unlock (20260609.git2d0bc9e8-24.04ubuntu2) noble; urgency=medium
+
+  * Bump a version.
+
+ -- Bin Li <binli@ubuntu.com>  Tue, 09 Jun 2026 17:54:34 +0800
+
+lenovo-wwan-unlock (20260609.git2d0bc9e8-24.04ubuntu1) noble; urgency=medium
+
+  * Release a new version with P14s Gen7 support.
+
+ -- Bin Li <binli@ubuntu.com>  Tue, 09 Jun 2026 17:44:14 +0800
+
+lenovo-wwan-unlock (20260525.git1e53ecad-24.04ubuntu2) noble; urgency=medium
+
+  * Version older than that in the archive.
+
+ -- Bin Li <binli@ubuntu.com>  Mon, 08 Jun 2026 13:49:17 +0800
+
+lenovo-wwan-unlock (20260525.git1e53ecad-24.04ubuntu1) noble; urgency=medium
+
+  * Update to the latest upstream version.
+
+ -- Bin Li <binli@ubuntu.com>  Thu, 28 May 2026 13:40:49 +0800
+
+lenovo-wwan-unlock (3.0.1-24.04ubuntu2) noble; urgency=medium
+
+  * Separated drop-in service into a single package.
+
+ -- Bin Li <binli@ubuntu.com>  Tue, 26 Aug 2025 16:43:42 +0800
+
 lenovo-wwan-unlock (3.0.1-24.04ubuntu1) noble; urgency=medium
 
   * Add '--test-low-power-suspend-resume'. (JIRA: SUTTON-2242)

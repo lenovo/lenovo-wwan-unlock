@@ -6,30 +6,58 @@ include <tunables/global>
   include <abstractions/base>
   include <abstractions/openssl>
 
+  capability dac_override,
+  capability dac_read_search,
+
   unix peer=(addr=@mbim-proxy),
 
   /opt/fcc_lenovo/configservice_lenovo mr,
-  /opt/fcc_lenovo/lib/*.so mrix,
+  /opt/fcc_lenovo/lib/libconfigservice* mrix,
+  /opt/fcc_lenovo/lib/libfiisdk* mrix,
+  /opt/fcc_lenovo/sar_config_files/ r,
+  /opt/fcc_lenovo/sar_config_files/** r,
+  /opt/fcc_lenovo/DEV_OTA_PACKAGE/ r,
+  /opt/fcc_lenovo/DEV_OTA_PACKAGE/** r,
+  /proc/ r,
+  /proc/** r,
+  /sys/devices/pci0000:00/**/descriptors r,
+  /sys/devices/pci0000:00/**/online r,
+  /sys/devices/system/node/ r,
+  /sys/devices/system/node/** r,
+  /sys/devices/LNXSYSTM:00/**/capacity r,
   /usr/bin/cat ix,
   /usr/bin/dash ix,
   /usr/bin/grep ix,
+  /usr/bin/gzip ix,
   /usr/bin/ls ix,
   /usr/bin/lspci Cx,
   /usr/bin/lsusb Cx,
+  /usr/bin/mkdir ix,
+  /usr/bin/mknod ix,
   /usr/bin/mmcli Cx -> mmcli,
   /usr/bin/ps Cx -> ps,
+  /usr/bin/pgrep Cx -> pgrep,
+  /usr/bin/rm ix,
+  /usr/bin/sed ix,
+  /usr/bin/tar Cx -> tar,
   /usr/libexec/mbim-proxy mrix,
   /usr/sbin/dmidecode Cx,
+
+  /etc/group r,
+  /etc/nsswitch.conf r,
+  /etc/passwd r,
 
   owner /dev/ r,
   owner /dev/wwan0at0 rw,
   owner /dev/wwan0mbim0 rw,
-  owner /opt/fcc_lenovo/sar_config_files/** r,
   owner /run/* rw,
   owner /sys/devices/virtual/dmi/id/product_family r,
   owner /sys/devices/virtual/dmi/id/product_name r,
   owner /sys/firmware/dmi/tables/DMI r,
   owner /sys/firmware/dmi/tables/smbios_entry_point r,
+  owner /var/log/SarConfigService.log rw,
+  /var/tmp/ r,
+  /var/tmp/** rw,
 
 
   profile /usr/bin/lspci {
@@ -57,7 +85,10 @@ include <tunables/global>
   profile /usr/sbin/dmidecode {
     include <abstractions/base>
 
+    unix (send,receive) peer=(addr=@mbim-proxy),
+
     /dev/mem r,
+    /dev/wwan* rw,
     /sys/firmware/dmi/tables** r,
     /sys/firmware/efi/systab r,
     /usr/sbin/dmidecode mr,
@@ -100,4 +131,47 @@ include <tunables/global>
     /sys/devices/system/node/** r,
 
   }
+
+  profile pgrep {
+    include <abstractions/base>
+    include <abstractions/nameservice>
+
+    capability dac_override,
+    capability dac_read_search,
+    capability sys_ptrace,
+
+    ptrace (read),
+
+    /usr/bin/pgrep mr,
+
+    @{PROC}/ r,
+    @{PROC}/@{pid}/** r,
+    @{PROC}/uptime r,
+    @{PROC}/sys/kernel/** r,
+    @{PROC}/tty/drivers r,
+    /sys/devices/system/node/ r,
+    /sys/devices/system/node/** r,
+
+  }
+
+  profile tar {
+    include <abstractions/base>
+    include <abstractions/nameservice>
+
+    capability chown,
+    capability dac_override,
+    capability dac_read_search,
+    capability fowner,
+    capability fsetid,
+
+    unix (send,receive) peer=(addr=@mbim-proxy),
+
+    /usr/bin/gzip ix,
+    /usr/bin/tar mr,
+
+    /opt/fcc_lenovo/** rw,
+    /var/tmp/** rw,
+
+  }
+
 }

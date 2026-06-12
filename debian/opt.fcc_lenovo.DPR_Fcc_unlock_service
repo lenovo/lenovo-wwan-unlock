@@ -9,16 +9,21 @@ include <tunables/global>
   unix peer=(addr=@mbim-proxy),
 
   /opt/fcc_lenovo/DPR_Fcc_unlock_service mr,
-  /opt/fcc_lenovo/lib/*.so mrix,
+  /opt/fcc_lenovo/lib/libfiisdk* mrix,
+  /opt/fcc_lenovo/lib/libmbimtools.so mrix,
+  /opt/fcc_lenovo/lib/libmodemauth* mrix,
   /usr/bin/cut ix,
   /usr/bin/dash ix,
+  /usr/bin/gawk ix,
   /usr/bin/grep ix,
   /usr/bin/gnuls ix,
   /usr/bin/ls ix,
   /usr/bin/lspci Cx,
   /usr/bin/lsusb Cx,
+  /usr/bin/mawk ix,
   /usr/bin/mmcli ix,
   /usr/bin/ps Cx -> ps,
+  /usr/bin/pgrep Cx -> pgrep,
   /usr/sbin/dmidecode Cx,
   /usr/libexec/mbim-proxy mrix,
 
@@ -95,4 +100,27 @@ include <tunables/global>
     /sys/devices/system/node/** r,
 
   }
+
+  profile pgrep {
+    include <abstractions/base>
+    include <abstractions/nameservice>
+
+    capability dac_override,
+    capability dac_read_search,
+    capability sys_ptrace,
+
+    ptrace (read),
+
+    /usr/bin/pgrep mr,
+
+    @{PROC}/ r,
+    @{PROC}/@{pid}/** r,
+    @{PROC}/uptime r,
+    @{PROC}/sys/kernel/** r,
+    @{PROC}/tty/drivers r,
+    /sys/devices/system/node/ r,
+    /sys/devices/system/node/** r,
+
+  }
+
 }
