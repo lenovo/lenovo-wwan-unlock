@@ -1,0 +1,4 @@
+lenovo-wwan-unlock: dir-or-file-in-opt
+lenovo-wwan-unlock: executable-not-elf-or-script
+lenovo-wwan-unlock: debug-file-with-no-debug-symbols
+lenovo-wwan-unlock: unknown-field Modaliases

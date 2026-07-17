@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+. /usr/share/debconf/confmodule
+
+case "$1" in
+    configure)
+        systemctl --system daemon-reload || true
+        deb-systemd-invoke restart ModemManager.service || true
+    ;;
+esac
+
+#DEBHELPER#

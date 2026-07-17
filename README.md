@@ -38,8 +38,15 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad T16 Gen 3
    - ThinkPad T14s Gen 5 (Intel)
    - ThinkPad T14s Gen 6 (AMD)
-   - ThinkPad X1 Carbon Gen 13 (LNL)
-   - ThinkPad X1 2-in-1 Gen 10 (LNL)
+     
+     -- **Below are list of 2025 products** --
+   - ThinkPad X1 Carbon Gen 13
+   - ThinkPad X1 2-in-1 Gen 10
+   - ThinkPad T14 Gen 6 (Intel/AMD)
+   - ThinkPad T14s Gen 6 (Intel/AMD)
+   - ThinkPad T16 Gen 4 (Intel/AMD)
+   - ThinkPad P16s Gen 4 AMD
+   - ThinkPad P14s Gen 6 AMD
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.6 or later
@@ -53,6 +60,14 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad L16 Gen 1
    - ThinkPad X13 2-in-1 Gen 5
    - ThinkPad T14 Gen 5 (Intel/AMD)
+  
+     -- **Below are list of 2025 products** --
+   - ThinkPad X1 Carbon Gen 13 (ARL only)
+   - ThinkPad X1 2-in-1 Gen 10 (ARL only)
+   - ThinkPad P16s Gen 4
+   - ThinkPad L14 Gen 6 (Intel/AMD)
+   - ThinkPad T14 Gen 6 (Intel/AMD)
+   - ThinkPad P14s Gen 6 AMD
      
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.5 or later
@@ -70,6 +85,17 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad T16 Gen 3
    - ThinkPad T14s Gen 5 (Intel)
      
+     -- **Below are list of 2025 products** --
+   - ThinkPad L13 Gen 6 (Intel/AMD)
+   - ThinkPad L13 2-in-1 Gen 6 (Intel/AMD)
+   - ThinkPad L14 Gen 6 (Intel/AMD)
+   - ThinkPad L16 Gen 2 (Intel/AMD)
+   - ThinkPad T14 Gen 6 (Intel/AMD)
+   - ThinkPad T14s Gen 6 (Intel/AMD)
+   - ThinkPad T16 Gen 4 (Intel/AMD)
+   - ThinkPad X13 Gen 6 (Intel/AMD)
+   - ThinkPad T14s 2-in-1 Gen 1 (Intel)
+     
    **Environment**:(Enabled only for non-USA SIM)
    - Kernel version: 6.5 or later
    - ModemManager version: 1.22 or later
@@ -85,13 +111,39 @@ List of Supported WWAN Modules and Systems:
    - Kernel version: 6.6 or later
    - ModemManager version: 1.21.2 or later
 
+7) WWAN module : Rolling Wireless RW350 
+   Supported systems:
+   - ThinkPad T14s 2-in-1 Gen 1 (Intel)
+   - ThinkPad X13 Gen 6
+   - ThinkPad P16 Gen 3
+   - ThinkPad P16v Gen 3
+     
+8) WWAN module : Foxconn SDX61 
+   Supported systems:
+   - ThinkPad X1 2-in-1 Gen 11
+   - ThinkPad X1 Carbon Gen 14
+   - ThinkPad T14 Gen 7 (Intel/AMD)
+   - ThinkPad T16 Gen 5 (Intel/AMD)
+   - ThinkPad T14s 2-in-1 Gen 2 (Intel)
+   - ThinkPad P14s Gen 7 AMD
+
+9) WWAN module : Rolling Wireless RW101R-GL 
+   Supported systems:
+   - ThinkPad X1 2-in-1 Gen 11
+   - ThinkPad X1 Carbon Gen 14
+   - ThinkPad L14 Gen 7 
+   - ThinkPad L16 Gen 3
+   - ThinkPad T14 Gen 7 (Intel/AMD)
+   - ThinkPad T16 Gen 5 (Intel/AMD)
+   - ThinkPad T14s 2-in-1 Gen 2 (Intel)
+
 Enablement is done on a Module + System basis. **Systems not listed 
 are currently not supported.**
 
 ------------------------------------------------------------------------
 Tested Operating Systems:
 - Ubuntu 22.04 : OK
-- Fedora: OK
+- Fedora: OK (Not tested for RW101 and Foxconn SDX61 modem)
 
 ------------------------------------------------------------------------
 **Please follow the procedure below step by step to enable WWAN**
@@ -137,14 +189,9 @@ Logs can be checked using **one** of the commands below:
 Additional Notes:
 - If the Modem disappears after the machine reboots, please
 restart it with the `systemctl restart ModemManager` command.
-- WWAN enablement is not done for USA SIM, used in below modules:
-   - Fibocom FM350
-   - Quectel RM520N-GL
-   - Quectel EM160R-GL
-   - Quectel EM061K
-- WWAN enablement is done for USA SIM except for Verizon SIM, used in below module:
-   - Fibocom L860R+
 
-  Reason: Carrier certification for USA operator is not completed and it
-          will take few months to enable WWAN for USA SIM.
+- WWAN enablement is currently blocked for the USA SIM, as carrier certification 
+for Linux is not being pursued at this time. However, I will provide an update 
+if the situation changes in the future.
+
 ------------------------------------------------------------------------

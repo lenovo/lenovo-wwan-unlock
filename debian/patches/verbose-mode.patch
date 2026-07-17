@@ -1,0 +1,13 @@
+diff --git a/lenovo-cfgservice.service b/lenovo-cfgservice.service
+index 9864e05..85c5d82 100644
+--- a/lenovo-cfgservice.service
++++ b/lenovo-cfgservice.service
+@@ -5,7 +5,7 @@ After=ModemManager.service
+ [Service]
+ Type=simple
+ User=root
+-ExecStart=/opt/fcc_lenovo/configservice_lenovo
++ExecStart=/opt/fcc_lenovo/configservice_lenovo -v
+ ExecReload=/bin/kill -HUP $MAINPID
+ Restart=on-failure
+ RestartSec=20

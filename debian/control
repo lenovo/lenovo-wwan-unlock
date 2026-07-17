@@ -1,7 +1,9 @@
 Source: lenovo-wwan-unlock
-Section: misc
+Section: non-free/net
 Priority: optional
 Maintainer: Commercial Engineering <commercial-engineering@canonical.com>
+XSBC-Original-Maintainer: Nitin Joshi1 <njoshi1@lenovo.com>
+XS-Autobuild: yes
 Build-Depends:
  debhelper-compat (= 13),
  dh-apparmor,
@@ -10,16 +12,23 @@ Build-Depends:
  libmbim-glib4,
  libmm-glib0,
  libpci3
-Standards-Version: 4.6.0
+Standards-Version: 4.6.2
 Vcs-Browser: https://github.com/lenovo/lenovo-wwan-unlock
 Vcs-Git: https://github.com/lenovo/lenovo-wwan-unlock.git
 Rules-Requires-Root: no
 
 Package: lenovo-wwan-unlock
 Architecture: amd64
-Depends:
- ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}, fastboot
+Recommends: lenovo-test-low-power-suspend-resume
 XB-Modaliases: ${modaliases}
 Description: Lenovo FCC unlock and SAR config package
  This package performs FCC unlock and doing SAR config with WWAN device
  on Lenovo machines.
+
+Package: lenovo-test-low-power-suspend-resume
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, modemmanager
+Description: ModemManager drop-in file for system suspend
+ The drop-in file will change ModemManager execution parameter to put modem
+ in low power mode during suspend/resume.

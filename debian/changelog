@@ -1,3 +1,15 @@
+lenovo-wwan-unlock (20260525.git1e53ecad-24.04ubuntu2) noble; urgency=medium
+
+  * Version older than that in the archive.
+
+ -- Bin Li <binli@ubuntu.com>  Mon, 08 Jun 2026 13:49:17 +0800
+
+lenovo-wwan-unlock (20260525.git1e53ecad-24.04ubuntu1) noble; urgency=medium
+
+  * Update to the latest upstream version.
+
+ -- Bin Li <binli@ubuntu.com>  Thu, 28 May 2026 13:40:49 +0800
+
 lenovo-wwan-unlock (2.1.3-24.04ubuntu2) noble; urgency=medium
 
   * Merge the two packages into one and use pci/usb id as modalias.

@@ -1,0 +1,27 @@
+#!/usr/bin/dh-exec
+configservice_lenovo /opt/fcc_lenovo/
+debian/mm-hook => /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/14c3:4d75
+debian/mm-hook => /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/17cb:0308
+debian/mm-hook => /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/1eac:1007
+debian/mm-hook => /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/1eac:100d
+debian/mm-hook => /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/2c7c:6008
+debian/mm-hook => /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/33f8:01a4
+debian/mm-hook => /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/33f8:01a8
+debian/mm-hook => /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/33f8:01a9
+debian/mm-hook => /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/33f8:0301
+debian/mm-hook => /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/33f8:0302
+debian/mm-hook => /usr/lib/x86_64-linux-gnu/ModemManager/fcc-unlock.d/8086:7560
+debian/lenovo-fccunlock.service /lib/systemd/system/
+debian/temp/sar_config_files /opt/fcc_lenovo/
+debian/temp/DEV_OTA_PACKAGE /opt/fcc_lenovo/
+lenovo-cfgservice.service /lib/systemd/system/
+libconfigserviceR+.so /opt/fcc_lenovo/lib/
+libconfigservice101.so.1.2 /opt/fcc_lenovo/lib/
+libconfigservice350.so /opt/fcc_lenovo/lib/
+libconfigservice350.so.1.2 /opt/fcc_lenovo/lib/
+libfiisdk.so.2.2.2 /opt/fcc_lenovo/lib/
+libmbimtools.so /opt/fcc_lenovo/lib/
+libmodemauth.so /opt/fcc_lenovo/lib/
+libmodemauth.so.1.1 /opt/fcc_lenovo/lib/
+libmodemauthRW101.so.1.1 /opt/fcc_lenovo/lib/
+DPR_Fcc_unlock_service /opt/fcc_lenovo/

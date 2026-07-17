@@ -11,6 +11,7 @@ current_dir=$(shell pwd)
 override_dh_auto_configure:
 	mkdir "$(current_dir)/debian/temp"
 	tar -zxvf sar_config_files.tar.gz -C "$(current_dir)/debian/temp"
+	tar -zxvf DEV_OTA_PACKAGE.tar.gz -C "$(current_dir)/debian/temp"
 
 override_dh_installsystemd:
 	dh_installsystemd -p lenovo-wwan-unlock lenovo-cfgservice.service
@@ -22,6 +23,13 @@ execute_after_dh_install:
 	dh_apparmor --profile-name=opt.fcc_lenovo.configservice_lenovo -p lenovo-wwan-unlock
 	dh_apparmor --profile-name=opt.fcc_lenovo.DPR_Fcc_unlock_service -p lenovo-wwan-unlock
 
+override_dh_strip:
+	dh_strip --no-automatic-dbgsym
+
 override_dh_auto_clean:
 	dh_auto_clean
 	rm -rf "$(current_dir)/debian/temp"
+
+override_dh_gencontrol:
+	dh_gencontrol
+	dh_gencontrol -p lenovo-test-low-power-suspend-resume -- -v4.0-24.04ubuntu1
