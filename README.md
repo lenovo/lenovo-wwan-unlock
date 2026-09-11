@@ -117,6 +117,7 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad X13 Gen 6
    - ThinkPad P16 Gen 3
    - ThinkPad P16v Gen 3
+   - ThinkPad X13 Gen 7
      
 8) WWAN module : Foxconn SDX61 
    Supported systems:
@@ -126,6 +127,7 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad T16 Gen 5 (Intel/AMD)
    - ThinkPad T14s 2-in-1 Gen 2 (Intel)
    - ThinkPad P14s Gen 7 AMD
+   - ThinkPad T14s Gen 7 (Intel/AMD)
 
 9) WWAN module : Rolling Wireless RW101R-GL 
    Supported systems:
@@ -136,14 +138,19 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad T14 Gen 7 (Intel/AMD)
    - ThinkPad T16 Gen 5 (Intel/AMD)
    - ThinkPad T14s 2-in-1 Gen 2 (Intel)
+   - ThinkPad X13 Gen 7
+   - ThinkPad T14s Gen 7 (Intel/AMD)
+   - ThinkPad L13 Gen 7
+   - ThinkPad L13 2-in-1 Gen 7
+   - ThinkEdge SE10n Gen 2
 
 Enablement is done on a Module + System basis. **Systems not listed 
 are currently not supported.**
 
 ------------------------------------------------------------------------
 Tested Operating Systems:
-- Ubuntu 22.04 : OK
-- Fedora: OK (Not tested for RW101 and Foxconn SDX61 modem)
+- Ubuntu 24.04 : OK
+- Fedora: OK
 
 ------------------------------------------------------------------------
 **Please follow the procedure below step by step to enable WWAN**
