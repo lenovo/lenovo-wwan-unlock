@@ -45,7 +45,7 @@ then
 	sudo cp -rvf libconfigserviceR+.so /opt/fcc_lenovo/lib/
 	sudo cp -rvf libconfigservice350.so /opt/fcc_lenovo/lib/
 	sudo cp -rvf libconfigservice350.so.1.2 /opt/fcc_lenovo/lib/
-	sudo cp -rvf libconfigservice101.so.1.2 /opt/fcc_lenovo/lib/
+	sudo cp -rvf libconfigservice101.so.1.3 /opt/fcc_lenovo/lib/
 	sudo cp -rvf libmbimtools.so /opt/fcc_lenovo/lib/
 	sudo cp -rvf libfiisdk.so.2.2.2 /opt/fcc_lenovo/lib/
 	sudo cp -rvf libmodemauthRW101.so.1.1 /opt/fcc_lenovo/lib/
@@ -68,7 +68,7 @@ then
 	sudo cp -rvf libconfigserviceR+.so /opt/fcc_lenovo/lib/
 	sudo cp -rvf libconfigservice350.so /opt/fcc_lenovo/lib/
 	sudo cp -rvf libconfigservice350.so.1.2 /opt/fcc_lenovo/lib/
-	sudo cp -rvf libconfigservice101.so.1.2 /opt/fcc_lenovo/lib/
+	sudo cp -rvf libconfigservice101.so.1.3 /opt/fcc_lenovo/lib/
 	sudo cp -rvf libmbimtools.so /opt/fcc_lenovo/lib/
 	sudo cp -rvf libfiisdk.so.2.2.2 /opt/fcc_lenovo/lib/
 	sudo cp -rvf libmodemauthRW101.so.1.1 /opt/fcc_lenovo/lib/
