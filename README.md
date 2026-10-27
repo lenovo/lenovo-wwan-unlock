@@ -129,6 +129,8 @@ List of Supported WWAN Modules and Systems:
    - ThinkPad P14s Gen 7 AMD
    - ThinkPad T14s Gen 7 (Intel/AMD)
    - ThinkPad X13 Detachable Gen 1
+   - ThinkPad P14s Gen 7
+   - ThinkPad P16s Gen 5 (Intel/AMD)
 
 9) WWAN module : Rolling Wireless RW101R-GL 
    Supported systems:
